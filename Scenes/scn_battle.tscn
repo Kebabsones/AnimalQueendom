@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://1jf3bqnp5wj7"]
+
+[ext_resource type="PackedScene" uid="uid://bau7rbl5j26hl" path="res://Entities/player_portrait.tscn" id="1_3hogh"]
+[ext_resource type="PackedScene" uid="uid://cjo8n1213ml22" path="res://Entities/card_slot.tscn" id="2_vxlpn"]
+[ext_resource type="Texture2D" uid="uid://d1kx04d4112ev" path="res://Sprites/Portraits/spr_enemy_potrait.png" id="3_pkqru"]
+[ext_resource type="PackedScene" uid="uid://cya4giuv6thi6" path="res://Entities/card.tscn" id="4_vxlpn"]
+
+[node name="Node2D" type="Node2D" unique_id=1295596859]
+
+[node name="Player" type="Node2D" parent="." unique_id=266751494]
+position = Vector2(118, 350)
+
+[node name="PlayerPortrait" parent="Player" unique_id=1969203228 instance=ExtResource("1_3hogh")]
+
+[node name="CardSlot" parent="Player" unique_id=1928134924 instance=ExtResource("2_vxlpn")]
+position = Vector2(200, -250)
+
+[node name="CardSlot2" parent="Player" unique_id=615395516 instance=ExtResource("2_vxlpn")]
+position = Vector2(200, -150)
+
+[node name="CardSlot3" parent="Player" unique_id=1287189590 instance=ExtResource("2_vxlpn")]
+position = Vector2(200, -50)
+
+[node name="CardSlot4" parent="Player" unique_id=258774974 instance=ExtResource("2_vxlpn")]
+position = Vector2(200, 50)
+
+[node name="CardSlot5" parent="Player" unique_id=387691680 instance=ExtResource("2_vxlpn")]
+position = Vector2(200, 150)
+
+[node name="Enemy" type="Node2D" parent="." unique_id=1967925333]
+position = Vector2(1060, 350)
+
+[node name="EnemyPortrait" type="Node2D" parent="Enemy" unique_id=1268115949]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/EnemyPortrait" unique_id=1149319509]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pkqru")
+
+[node name="CardSlot" parent="Enemy/EnemyPortrait" unique_id=1084679051 instance=ExtResource("2_vxlpn")]
+position = Vector2(-200, -250)
+
+[node name="CardSlot2" parent="Enemy/EnemyPortrait" unique_id=1797846919 instance=ExtResource("2_vxlpn")]
+position = Vector2(-200, -150)
+
+[node name="CardSlot3" parent="Enemy/EnemyPortrait" unique_id=2094641418 instance=ExtResource("2_vxlpn")]
+position = Vector2(-200, -50)
+
+[node name="CardSlot4" parent="Enemy/EnemyPortrait" unique_id=191137953 instance=ExtResource("2_vxlpn")]
+position = Vector2(-200, 50)
+
+[node name="CardSlot5" parent="Enemy/EnemyPortrait" unique_id=1052055169 instance=ExtResource("2_vxlpn")]
+position = Vector2(-200, 150)
+
+[node name="Card" parent="." unique_id=837520596 instance=ExtResource("4_vxlpn")]
+position = Vector2(572, 361)

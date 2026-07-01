@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bau7rbl5j26hl"]
+
+[ext_resource type="Texture2D" uid="uid://c4skryuneqp4c" path="res://Sprites/Portraits/spr_player_potrait.png" id="1_j1vqj"]
+
+[node name="PlayerPortrait" type="Node2D" unique_id=1969203228]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1715267333]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_j1vqj")

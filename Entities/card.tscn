@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cya4giuv6thi6"]
+
+[ext_resource type="Script" uid="uid://c50wc1p5chepl" path="res://Scripts/card.gd" id="1_mxdp4"]
+[ext_resource type="Texture2D" uid="uid://cndwx1bravqcu" path="res://Sprites/Cards/spr_warrior_minion.png" id="1_rjdtu"]
+[ext_resource type="Script" uid="uid://cyahoua6q67na" path="res://Scripts/Misc/draggable.gd" id="2_mxdp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rn7yp"]
+size = Vector2(13, 14)
+
+[node name="Card" type="Node2D" unique_id=837520596]
+script = ExtResource("1_mxdp4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1050862889]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_rjdtu")
+
+[node name="draggable" type="Button" parent="." unique_id=1056790387]
+offset_left = -37.0
+offset_top = -37.0
+offset_right = 37.0
+offset_bottom = 37.0
+script = ExtResource("2_mxdp4")
+metadata/_custom_type_script = "uid://cyahoua6q67na"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=531590188]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1261869886]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_rn7yp")
+
+[connection signal="button_down" from="draggable" to="draggable" method="_on_button_down"]
+[connection signal="button_up" from="draggable" to="draggable" method="_on_button_up"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
